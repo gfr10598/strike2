@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"google.golang.org/appengine"
-	"http"
+	"net/http"
 	//	_ "myapp/package0"
 	//	_ "myapp/package1"
 )
