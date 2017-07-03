@@ -6,6 +6,17 @@ import (
 	//	_ "myapp/package1"
 )
 
+func handler(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/" {
+		http.NotFound(w, r)
+		return
+	}
+	fmt.Fprint(w, "Hello world!")
+}
+
 func main() {
+
+	http.HandleFunc("/", handler)
+
 	appengine.Main()
 }
